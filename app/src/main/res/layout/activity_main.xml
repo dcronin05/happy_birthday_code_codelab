@@ -40,8 +40,9 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:text="@string/happy_birthday_signature"
-        android:textColor="#6124E7"
+        android:textColor="#CBA2DB"
         android:textSize="22sp"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="TextContrastCheck" />
