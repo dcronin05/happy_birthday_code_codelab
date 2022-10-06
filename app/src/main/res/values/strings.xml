@@ -4,5 +4,6 @@
     <string name="happy_birthday_signature">From, myself.</string>
 
     <string name="dice_roller_button">Roll Dice</string>
-    <string name="lucky_number_result">You rolled the lucky number!!</string>
+    <string name="lucky_number_result_win">" was the lucky number!!"</string>
+    <string name="lucky_number_result_lose">" was not the lucky number…"</string>
 </resources>
