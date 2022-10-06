@@ -15,10 +15,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun getLuckyNum(diceSides: Int = 6): Int {
-        return (1..diceSides).random()
-    }
-
     private fun getDiceImageResource(num: Int): Int {
         val diceImageResource = when (num) {
             1 -> R.drawable.dice_1
@@ -54,7 +50,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val diceButton: Button = findViewById(R.id.dice_button)
-        val luckyNumResultTextView: TextView = findViewById(R.id.textView4)
 
         val initDiceResult = rollDice()
 
@@ -64,23 +59,12 @@ class MainActivity : AppCompatActivity() {
         displayDiceResult(2, initDiceResult)
 
         diceButton.setOnClickListener {
-
             Toast.makeText(this, "Dice Rolled!", Toast.LENGTH_SHORT).show()
 
             var diceResult = rollDice()
             displayDiceResult(1, diceResult)
             diceResult = rollDice()
             displayDiceResult(2, diceResult)
-
-            val num = getLuckyNum()
-
-            if (diceResult == num) {
-                luckyNumResultTextView.text =
-                    diceResult.toString() + getString(R.string.lucky_number_result_win)
-            } else {
-                luckyNumResultTextView.text =
-                    diceResult.toString() + getString(R.string.lucky_number_result_lose)
-            }
         }
 
 
